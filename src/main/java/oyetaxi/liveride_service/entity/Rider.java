@@ -15,8 +15,7 @@ public class Rider {
     private String id;
     private  String name;
     private  String ride;
-    private List<String> history;
-    private  List<String> curloc;
+    private  String curloc;
     private  Boolean active ;
 
     public String getId() {
@@ -43,19 +42,12 @@ public class Rider {
         this.ride = ride;
     }
 
-    public List<String> getHistory() {
-        return history;
-    }
 
-    public void setHistory(List<String> history) {
-        this.history = history;
-    }
-
-    public List<String> getCurloc() {
+    public String getCurloc() {
         return curloc;
     }
 
-    public void setCurloc(List<String> curloc) {
+    public void setCurloc(String curloc) {
         this.curloc = curloc;
     }
 
@@ -73,7 +65,6 @@ public class Rider {
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", ride='" + ride + '\'' +
-                ", history=" + history +
                 ", curloc=" + curloc +
                 ", active=" + active +
                 '}';
