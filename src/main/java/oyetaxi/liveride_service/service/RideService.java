@@ -13,13 +13,13 @@ public class RideService {
     @Autowired
     private RideRepo rideRepo;
 
-    public Ride createRide(){
-        Ride ride= new Ride();
-        ride.setId("r_"+UUID.randomUUID().toString().split("-")[0]);
+    public Ride createRide() {
+        Ride ride = new Ride();
+        ride.setId("ride_" + UUID.randomUUID().toString().split("-")[0]);
         ride.setStatus("draft");
         ride.setTimestamp(LocalDateTime.now());
         rideRepo.save(ride);
-        return  ride;
+        return ride;
     }
 
 }

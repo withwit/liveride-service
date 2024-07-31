@@ -41,8 +41,11 @@ public class riderDAOimpl implements riderDAO {
 
     @Override
     public List<Rider> getAllRider() {
-        TypedQuery<Rider> query = entityManager.createQuery("from rider", Rider.class);
-        return query.getResultList();
+        TypedQuery<Rider> query = entityManager.createQuery("from ride", Rider.class);
+        System.out.println(query.getResultList());
+        System.out.println(" All results here.XXXXXXXXXXXXXXXXXXXX");
+        List<Rider> res =query.getResultList();
+        return  res;
     }
 
     @Override

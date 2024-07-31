@@ -5,18 +5,20 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-import java.util.List;
-
 @Table(name = "rider")
 @Entity
 public class Rider {
     @Id
-    @Column(name="id")
+    @Column(name = "id")
     private String id;
-    private  String name;
-    private  String ride;
-    private  String curloc;
-    private  Boolean active ;
+    @Column(name = "name")
+    private String name;
+    @Column(name = "ride_id")
+    private String ride;
+    @Column(name = "curloc")
+    private String curloc;
+    @Column(name = "is_active")
+    private Boolean active;
 
     public String getId() {
         return id;

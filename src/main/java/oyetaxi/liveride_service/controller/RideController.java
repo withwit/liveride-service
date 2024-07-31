@@ -6,11 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import oyetaxi.liveride_service.repository.RideRepo;
 import oyetaxi.liveride_service.service.RideService;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/cloud")
 @AllArgsConstructor
 @NoArgsConstructor
 public class RideController {
@@ -18,12 +17,12 @@ public class RideController {
     private RideService rideService;
 
     @GetMapping("/")
-    public String  Hello(){
+    public String Hello() {
         return "Wc";
     }
 
     @GetMapping("/create")
-    public String  Create(){
-        return "Ride created: "+rideService.createRide().toString();
+    public String Create() {
+        return "Ride created: " + rideService.createRide().toString();
     }
 }

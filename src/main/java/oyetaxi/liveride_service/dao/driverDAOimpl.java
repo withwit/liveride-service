@@ -3,13 +3,14 @@ package oyetaxi.liveride_service.dao;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import oyetaxi.liveride_service.entity.Driver;
-import oyetaxi.liveride_service.entity.Rider;
 
 import java.util.List;
 import java.util.UUID;
 
-public class driverDAOimpl implements  driverDAO{
+@Repository
+public class driverDAOimpl implements driverDAO {
 
 
     private EntityManager entityManager;
@@ -47,6 +48,6 @@ public class driverDAOimpl implements  driverDAO{
 
     @Override
     public Driver getDriver(String id) {
-        return entityManager.find(Driver.class,id);
+        return entityManager.find(Driver.class, id);
     }
 }

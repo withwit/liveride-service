@@ -1,6 +1,5 @@
 package oyetaxi.liveride_service.entity;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,8 +23,6 @@ public class Ride {
     private LocalDateTime timestamp;
     private String location;
     private String status;
-
-
 
 
     public String getId() {
