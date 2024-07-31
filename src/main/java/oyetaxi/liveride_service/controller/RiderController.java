@@ -8,9 +8,9 @@ import oyetaxi.liveride_service.service.RiderService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/rider")
 public class RiderController {
-    private RiderService riderService;
+    private final RiderService riderService;
 
     @Autowired
     public RiderController(RiderService r) {
@@ -22,18 +22,19 @@ public class RiderController {
 
         return "Rider page.";
     }
+
     @PostMapping("/create")
     public String createRider() {
         Rider rider = riderService.createRider();
-        return rider.toString()+" Rider created.";
+        return rider.toString() + " Rider created.";
     }
 
-    @GetMapping("/riders")
+    @GetMapping("/all")
     public List<Rider> getAllRider() {
         return riderService.getAllRider();
     }
 
-    @GetMapping("/rider/{id}")
+    @GetMapping("/{id}")
     public Rider getRider(@PathVariable String id) {
         return riderService.getRider(id);
     }

@@ -42,7 +42,7 @@ public class driverDAOimpl implements driverDAO {
 
     @Override
     public List<Driver> getAllDriver() {
-        TypedQuery<Driver> query = entityManager.createQuery("from driver", Driver.class);
+        TypedQuery<Driver> query = entityManager.createQuery("from Driver", Driver.class);
         return query.getResultList();
     }
 

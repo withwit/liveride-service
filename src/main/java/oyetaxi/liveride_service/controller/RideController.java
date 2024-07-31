@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import oyetaxi.liveride_service.service.RideService;
 
 @RestController
-@RequestMapping("/cloud")
+@RequestMapping("/ride")
 @AllArgsConstructor
 @NoArgsConstructor
 public class RideController {
