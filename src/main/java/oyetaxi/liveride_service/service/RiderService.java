@@ -11,4 +11,6 @@ public interface RiderService {
     List<Rider> getAllRider();
 
     Rider getRider(String id);
+
+    String updateLoc(String id, String loc);
 }

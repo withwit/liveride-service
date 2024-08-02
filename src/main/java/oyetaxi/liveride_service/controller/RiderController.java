@@ -2,6 +2,7 @@ package oyetaxi.liveride_service.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import oyetaxi.liveride_service.dto.LocUpdateDTO;
 import oyetaxi.liveride_service.entity.Rider;
 import oyetaxi.liveride_service.service.RiderService;
 
@@ -37,5 +38,11 @@ public class RiderController {
     @GetMapping("/{id}")
     public Rider getRider(@PathVariable String id) {
         return riderService.getRider(id);
+    }
+
+    @PutMapping("/update/{id}")
+    public String updateLoc(@PathVariable String id, @RequestBody LocUpdateDTO loc) {
+        System.out.println("+++++++++++++++++" + loc.getCurloc());
+        return riderService.updateLoc(id, loc.getCurloc());
     }
 }

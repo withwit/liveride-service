@@ -33,4 +33,10 @@ public class RiderServiceImpl implements RiderService {
     public Rider getRider(String id) {
         return riderDAO.getRider(id);
     }
+
+    @Transactional
+    @Override
+    public String updateLoc(String id, String loc) {
+        return riderDAO.updateLoc(id, loc);
+    }
 }

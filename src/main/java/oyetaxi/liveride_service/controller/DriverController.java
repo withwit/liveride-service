@@ -25,6 +25,7 @@ public class DriverController {
 
     @PostMapping("/create")
     public String create() {
+        System.out.println("Trying to create");
         Driver driver = driverService.createDriver();
         return driver.toString() + " Driver created.";
     }

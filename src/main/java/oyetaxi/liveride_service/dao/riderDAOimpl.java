@@ -43,12 +43,20 @@ public class riderDAOimpl implements riderDAO {
     public List<Rider> getAllRider() {
         // the query table name is not sql table but the entity name.
         TypedQuery<Rider> query = entityManager.createQuery("from Rider", Rider.class);
-        List<Rider> res =query.getResultList();
-        return  res;
+        List<Rider> res = query.getResultList();
+        return res;
     }
 
     @Override
     public Rider getRider(String id) {
         return entityManager.find(Rider.class, id);
+    }
+
+    @Override
+    public String updateLoc(String id, String loc) {
+        Rider _rider = entityManager.find(Rider.class, id);
+        _rider.setCurloc(loc);
+        entityManager.merge(_rider);
+        return _rider.toString();
     }
 }
