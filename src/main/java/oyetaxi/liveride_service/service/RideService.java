@@ -18,6 +18,10 @@ public class RideService {
         ride.setId("ride_" + UUID.randomUUID().toString().split("-")[0]);
         ride.setStatus("draft");
         ride.setTimestamp(LocalDateTime.now());
+        ride.setDriver("d_ba489fe8");
+        ride.setRider("r_2c3d1855");
+        ride.setLocation("loc");
+
         rideRepo.save(ride);
         return ride;
     }

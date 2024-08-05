@@ -1,5 +1,6 @@
 package oyetaxi.liveride_service.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,11 +18,17 @@ public class Ride {
 
 
     @Id
+    @Column(name="_id")
     private String id;
+    @Column(name = "rider_id")
     private String rider;
+    @Column(name = "driver_id")
     private String driver;
+    @Column(name = "timestamp")
     private LocalDateTime timestamp;
+    @Column(name = "loc")
     private String location;
+    @Column(name = "status")
     private String status;
 
 
