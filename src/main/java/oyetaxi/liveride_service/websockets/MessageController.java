@@ -8,7 +8,7 @@ import oyetaxi.liveride_service.websockets.comm_model.LocResponse;
 
 @Controller
 public class MessageController {
-    @MessageMapping("hello")
+    @MessageMapping("/hello")
     @SendTo("/channel/ride")
     public LocResponse GetLocSendSubscription(LocResponse response) throws Exception {
         Thread.sleep(1000);
